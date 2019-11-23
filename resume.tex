@@ -1,0 +1,153 @@
+\documentclass[11pt, twoside]{article}
+	\usepackage[utf8]{inputenc}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{graphicx}
+    \usepackage{enumitem}
+    \usepackage[letterpaper, margin=1in, top=0in, bottom=3in, includehead, headheight=40pt]{geometry}
+    \usepackage{fancyhdr}
+    \fancyhf{}
+    \pagestyle{fancy}
+    \fancyhead[RO]{\includegraphics[width=10cm]{COOP_Hdr.png}}
+    \fancyhead[CE]{David Louie}
+    \renewcommand{\headrulewidth}{0pt}
+    \textheight=9.9in
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+    
+
+    \begin{document}
+
+
+\pagenumbering{gobble}
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {David Louie}}\\
+	%1786 Esquimalt Avenue 
+    3\textsuperscript{rd} year B.Sc Computer Science \\
+    davidlouie45@gmail.com $\cdot$ 604-500-8174 $\cdot$ 
+    github.com/DavidLouie\\
+\end{center}
+
+\header{Technical Skills}
+\vspace{2pt}
+\begin{tabular}{ l l }
+	Programming Languages: & Java, C++, C, Python, TypeScript/JavaScript, Assembly                           \\
+	Software:              & IntelliJ, Android Studio, Vim, R Commander \\
+	Operating Systems:     & Linux, macOS, Windows                                 \\
+	Other:				   & JUnit, Git, GDB, UML Diagrams, LaTeX							   \\
+\end{tabular}
+
+\vspace*{2mm}
+
+%==== Technical Experience ====%
+\header{Technical Work Experience}
+\vspace{1mm}
+
+\textbf{Facebook} \hfill Menlo Park, CA\\
+\textit{Software Engineering Internship} \hfill May 2019 | August 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked on the Constellation tracking system for the controllers of Oculus VR headsets
+	\item Prototyped and implemented improvements to the online calibration using C++, allowing for reduced need to perform expensive factory calibrations and cost savings
+	\item Visualized tracking improvements with Python, enabling easy comparison of uncalibrated, factory calibrated, and online calibrated performance
+\end{itemize}
+
+\textbf{Intel} \hfill Vancouver, BC\\
+\textit{SoC Emulation Engineer (Internship)} \hfill Sep 2018 | April 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Wrote a Python script to handle the validation of new machines for use in TeamCity Continous Integration
+	\item Integrated code coverage tool with TeamCity and Artifactory to make it much easier for developers to determine coverage, resulting in improved coverage
+	\item Added new features to the virtual platform software emulation of an upcoming SSD using C++ and SystemC
+\end{itemize}
+
+%=== Personal Projects ===%
+\header{Personal Projects}
+{\textbf{BudgetBunny} \sl Java, Android Studio}  \hfill Jan 2019 \\
+ A receipt-scanning budgeting app made at nwHacks 2019. \\
+\vspace{-5pt}
+\begin{itemize} \itemsep 0pt
+	\item Used the Google Mobile Vision API to read the text in images taken with the app
+	\item Implemented a parser using regular expressions to extract common items on receipts such as the store and the price
+	\item Built the front end UI in Android Studio and connected it to the backend receipt processing
+\end{itemize}
+\vspace*{2mm}
+
+%=== Academic Projects ===%
+\header{Academic Projects}
+
+{\textbf{Insight UBC} \sl TypeScript, Node.js}  \hfill Sep 2019 - Present\\
+Full stack web development project to implement querying of UBC metadata.\\
+\vspace{-5pt}
+\begin{itemize} \itemsep 0pt
+	\item Implemented backend of the project in TypeScript and Node.js, enabling adding of data downloaded from the UBC website and queries of the data (e.g. find courses with an average greater than 80\%) \\
+    \item Connected frontend UI to a Web server allowing users to build a query using the UI, send it to a REST endpoint in the server, and render the results in the browser
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of British Columbia}\hfill Vancouver, BC\\
+B.Sc. Computer Science \textit{Average: 97\%} \hfill Grad: Expected May 2021\\
+\vspace{2mm}
+
+\vspace*{2mm}
+\ 
+\end{document}
